@@ -1,0 +1,345 @@
+2025-03-05 16:34:00,918 - Connected to machine on port 5001
+2025-03-05 16:34:00,927 - Connected to machine on port 5002
+2025-03-05 16:34:00,928 - Machine 2 starting with clock rate 6
+2025-03-05 16:34:00,928 - INTERNAL event, logical clock: 1
+2025-03-05 16:34:01,100 - RECEIVE event, queue length: 1, logical clock: 2
+2025-03-05 16:34:01,271 - RECEIVE event, queue length: 0, logical clock: 3
+2025-03-05 16:34:01,438 - SEND event to port 5002, logical clock: 4
+2025-03-05 16:34:01,607 - SEND event to port 5001, logical clock: 5
+2025-03-05 16:34:01,776 - SEND event to port 5002, logical clock: 6
+2025-03-05 16:34:01,943 - SEND event to port 5001, logical clock: 7
+2025-03-05 16:34:02,115 - INTERNAL event, logical clock: 8
+2025-03-05 16:34:02,287 - INTERNAL event, logical clock: 9
+2025-03-05 16:34:02,454 - SEND event to port 5002, logical clock: 10
+2025-03-05 16:34:02,626 - SEND event to port 5002, logical clock: 11
+2025-03-05 16:34:02,797 - SEND event to port 5001, logical clock: 12
+2025-03-05 16:34:02,966 - SEND event to ALL machines, logical clock: 13
+2025-03-05 16:34:03,138 - SEND event to port 5001, logical clock: 14
+2025-03-05 16:34:03,309 - SEND event to port 5002, logical clock: 15
+2025-03-05 16:34:03,481 - INTERNAL event, logical clock: 16
+2025-03-05 16:34:03,653 - SEND event to port 5002, logical clock: 17
+2025-03-05 16:34:03,822 - INTERNAL event, logical clock: 18
+2025-03-05 16:34:03,994 - SEND event to port 5001, logical clock: 19
+2025-03-05 16:34:04,165 - SEND event to port 5002, logical clock: 20
+2025-03-05 16:34:04,333 - INTERNAL event, logical clock: 21
+2025-03-05 16:34:04,504 - INTERNAL event, logical clock: 22
+2025-03-05 16:34:04,676 - INTERNAL event, logical clock: 23
+2025-03-05 16:34:04,848 - SEND event to port 5001, logical clock: 24
+2025-03-05 16:34:05,019 - RECEIVE event, queue length: 0, logical clock: 25
+2025-03-05 16:34:05,191 - INTERNAL event, logical clock: 26
+2025-03-05 16:34:05,361 - INTERNAL event, logical clock: 27
+2025-03-05 16:34:05,533 - SEND event to ALL machines, logical clock: 28
+2025-03-05 16:34:05,703 - INTERNAL event, logical clock: 29
+2025-03-05 16:34:05,874 - INTERNAL event, logical clock: 30
+2025-03-05 16:34:06,045 - SEND event to ALL machines, logical clock: 31
+2025-03-05 16:34:06,216 - SEND event to port 5001, logical clock: 32
+2025-03-05 16:34:06,384 - SEND event to ALL machines, logical clock: 33
+2025-03-05 16:34:06,553 - INTERNAL event, logical clock: 34
+2025-03-05 16:34:06,725 - SEND event to port 5001, logical clock: 35
+2025-03-05 16:34:06,896 - SEND event to port 5002, logical clock: 36
+2025-03-05 16:34:07,064 - INTERNAL event, logical clock: 37
+2025-03-05 16:34:07,236 - INTERNAL event, logical clock: 38
+2025-03-05 16:34:07,408 - RECEIVE event, queue length: 0, logical clock: 39
+2025-03-05 16:34:07,576 - SEND event to ALL machines, logical clock: 40
+2025-03-05 16:34:07,748 - SEND event to port 5001, logical clock: 41
+2025-03-05 16:34:07,920 - SEND event to port 5001, logical clock: 42
+2025-03-05 16:34:08,090 - RECEIVE event, queue length: 0, logical clock: 43
+2025-03-05 16:34:08,262 - SEND event to ALL machines, logical clock: 44
+2025-03-05 16:34:08,432 - SEND event to port 5001, logical clock: 45
+2025-03-05 16:34:08,604 - INTERNAL event, logical clock: 46
+2025-03-05 16:34:08,775 - INTERNAL event, logical clock: 47
+2025-03-05 16:34:08,942 - INTERNAL event, logical clock: 48
+2025-03-05 16:34:09,111 - SEND event to ALL machines, logical clock: 49
+2025-03-05 16:34:09,282 - SEND event to port 5002, logical clock: 50
+2025-03-05 16:34:09,453 - SEND event to ALL machines, logical clock: 51
+2025-03-05 16:34:09,621 - SEND event to ALL machines, logical clock: 52
+2025-03-05 16:34:09,792 - INTERNAL event, logical clock: 53
+2025-03-05 16:34:09,964 - SEND event to port 5001, logical clock: 54
+2025-03-05 16:34:10,136 - INTERNAL event, logical clock: 55
+2025-03-05 16:34:10,302 - INTERNAL event, logical clock: 56
+2025-03-05 16:34:10,474 - INTERNAL event, logical clock: 57
+2025-03-05 16:34:10,646 - INTERNAL event, logical clock: 58
+2025-03-05 16:34:10,818 - RECEIVE event, queue length: 0, logical clock: 59
+2025-03-05 16:34:10,989 - INTERNAL event, logical clock: 60
+2025-03-05 16:34:11,161 - SEND event to ALL machines, logical clock: 61
+2025-03-05 16:34:11,333 - INTERNAL event, logical clock: 62
+2025-03-05 16:34:11,504 - SEND event to port 5002, logical clock: 63
+2025-03-05 16:34:11,671 - INTERNAL event, logical clock: 64
+2025-03-05 16:34:11,841 - SEND event to port 5001, logical clock: 65
+2025-03-05 16:34:12,012 - INTERNAL event, logical clock: 66
+2025-03-05 16:34:12,184 - INTERNAL event, logical clock: 67
+2025-03-05 16:34:12,354 - SEND event to port 5001, logical clock: 68
+2025-03-05 16:34:12,521 - SEND event to port 5002, logical clock: 69
+2025-03-05 16:34:12,691 - SEND event to port 5001, logical clock: 70
+2025-03-05 16:34:12,862 - INTERNAL event, logical clock: 71
+2025-03-05 16:34:13,034 - SEND event to port 5001, logical clock: 72
+2025-03-05 16:34:13,203 - RECEIVE event, queue length: 0, logical clock: 73
+2025-03-05 16:34:13,372 - SEND event to port 5001, logical clock: 74
+2025-03-05 16:34:13,544 - RECEIVE event, queue length: 0, logical clock: 75
+2025-03-05 16:34:13,715 - INTERNAL event, logical clock: 76
+2025-03-05 16:34:13,887 - RECEIVE event, queue length: 0, logical clock: 77
+2025-03-05 16:34:14,059 - INTERNAL event, logical clock: 78
+2025-03-05 16:34:14,229 - INTERNAL event, logical clock: 79
+2025-03-05 16:34:14,401 - INTERNAL event, logical clock: 80
+2025-03-05 16:34:14,570 - INTERNAL event, logical clock: 81
+2025-03-05 16:34:14,742 - INTERNAL event, logical clock: 82
+2025-03-05 16:34:14,912 - SEND event to ALL machines, logical clock: 83
+2025-03-05 16:34:15,083 - INTERNAL event, logical clock: 84
+2025-03-05 16:34:15,253 - SEND event to ALL machines, logical clock: 85
+2025-03-05 16:34:15,424 - INTERNAL event, logical clock: 86
+2025-03-05 16:34:15,596 - INTERNAL event, logical clock: 87
+2025-03-05 16:34:15,768 - SEND event to port 5001, logical clock: 88
+2025-03-05 16:34:15,939 - INTERNAL event, logical clock: 89
+2025-03-05 16:34:16,108 - SEND event to ALL machines, logical clock: 90
+2025-03-05 16:34:16,280 - SEND event to port 5001, logical clock: 91
+2025-03-05 16:34:16,448 - SEND event to port 5002, logical clock: 92
+2025-03-05 16:34:16,615 - SEND event to port 5002, logical clock: 93
+2025-03-05 16:34:16,786 - SEND event to port 5001, logical clock: 94
+2025-03-05 16:34:16,958 - SEND event to ALL machines, logical clock: 95
+2025-03-05 16:34:17,129 - SEND event to ALL machines, logical clock: 96
+2025-03-05 16:34:17,298 - INTERNAL event, logical clock: 97
+2025-03-05 16:34:17,469 - SEND event to port 5001, logical clock: 98
+2025-03-05 16:34:17,640 - SEND event to port 5001, logical clock: 99
+2025-03-05 16:34:17,810 - INTERNAL event, logical clock: 100
+2025-03-05 16:34:17,982 - SEND event to port 5002, logical clock: 101
+2025-03-05 16:34:18,152 - INTERNAL event, logical clock: 102
+2025-03-05 16:34:18,323 - INTERNAL event, logical clock: 103
+2025-03-05 16:34:18,495 - RECEIVE event, queue length: 0, logical clock: 104
+2025-03-05 16:34:18,667 - INTERNAL event, logical clock: 105
+2025-03-05 16:34:18,839 - SEND event to port 5001, logical clock: 106
+2025-03-05 16:34:19,010 - SEND event to port 5001, logical clock: 107
+2025-03-05 16:34:19,182 - SEND event to port 5001, logical clock: 108
+2025-03-05 16:34:19,353 - INTERNAL event, logical clock: 109
+2025-03-05 16:34:19,524 - RECEIVE event, queue length: 0, logical clock: 110
+2025-03-05 16:34:19,693 - SEND event to ALL machines, logical clock: 111
+2025-03-05 16:34:19,863 - INTERNAL event, logical clock: 112
+2025-03-05 16:34:20,032 - INTERNAL event, logical clock: 113
+2025-03-05 16:34:20,203 - RECEIVE event, queue length: 0, logical clock: 114
+2025-03-05 16:34:20,370 - INTERNAL event, logical clock: 115
+2025-03-05 16:34:20,542 - INTERNAL event, logical clock: 116
+2025-03-05 16:34:20,714 - SEND event to port 5001, logical clock: 117
+2025-03-05 16:34:20,886 - SEND event to port 5002, logical clock: 118
+2025-03-05 16:34:21,057 - SEND event to port 5001, logical clock: 119
+2025-03-05 16:34:21,229 - INTERNAL event, logical clock: 120
+2025-03-05 16:34:21,401 - SEND event to port 5001, logical clock: 121
+2025-03-05 16:34:21,569 - RECEIVE event, queue length: 0, logical clock: 122
+2025-03-05 16:34:21,741 - SEND event to port 5001, logical clock: 123
+2025-03-05 16:34:21,913 - RECEIVE event, queue length: 0, logical clock: 124
+2025-03-05 16:34:22,083 - INTERNAL event, logical clock: 125
+2025-03-05 16:34:22,255 - RECEIVE event, queue length: 0, logical clock: 126
+2025-03-05 16:34:22,423 - INTERNAL event, logical clock: 127
+2025-03-05 16:34:22,594 - SEND event to port 5001, logical clock: 128
+2025-03-05 16:34:22,765 - INTERNAL event, logical clock: 129
+2025-03-05 16:34:22,934 - RECEIVE event, queue length: 0, logical clock: 130
+2025-03-05 16:34:23,106 - INTERNAL event, logical clock: 131
+2025-03-05 16:34:23,274 - SEND event to port 5002, logical clock: 132
+2025-03-05 16:34:23,445 - SEND event to port 5002, logical clock: 133
+2025-03-05 16:34:23,615 - SEND event to port 5002, logical clock: 134
+2025-03-05 16:34:23,787 - INTERNAL event, logical clock: 135
+2025-03-05 16:34:23,959 - SEND event to ALL machines, logical clock: 136
+2025-03-05 16:34:24,130 - INTERNAL event, logical clock: 137
+2025-03-05 16:34:24,302 - INTERNAL event, logical clock: 138
+2025-03-05 16:34:24,474 - SEND event to port 5001, logical clock: 139
+2025-03-05 16:34:24,645 - SEND event to ALL machines, logical clock: 140
+2025-03-05 16:34:24,815 - INTERNAL event, logical clock: 141
+2025-03-05 16:34:24,986 - INTERNAL event, logical clock: 142
+2025-03-05 16:34:25,158 - INTERNAL event, logical clock: 143
+2025-03-05 16:34:25,326 - INTERNAL event, logical clock: 144
+2025-03-05 16:34:25,495 - SEND event to port 5001, logical clock: 145
+2025-03-05 16:34:25,667 - SEND event to port 5002, logical clock: 146
+2025-03-05 16:34:25,839 - SEND event to port 5001, logical clock: 147
+2025-03-05 16:34:26,010 - INTERNAL event, logical clock: 148
+2025-03-05 16:34:26,179 - SEND event to port 5001, logical clock: 149
+2025-03-05 16:34:26,350 - SEND event to port 5002, logical clock: 150
+2025-03-05 16:34:26,519 - SEND event to port 5002, logical clock: 151
+2025-03-05 16:34:26,691 - SEND event to ALL machines, logical clock: 152
+2025-03-05 16:34:26,862 - INTERNAL event, logical clock: 153
+2025-03-05 16:34:27,033 - SEND event to port 5001, logical clock: 154
+2025-03-05 16:34:27,202 - INTERNAL event, logical clock: 155
+2025-03-05 16:34:27,374 - SEND event to port 5002, logical clock: 156
+2025-03-05 16:34:27,546 - SEND event to ALL machines, logical clock: 157
+2025-03-05 16:34:27,717 - INTERNAL event, logical clock: 158
+2025-03-05 16:34:27,886 - SEND event to port 5001, logical clock: 159
+2025-03-05 16:34:28,057 - INTERNAL event, logical clock: 160
+2025-03-05 16:34:28,228 - SEND event to ALL machines, logical clock: 161
+2025-03-05 16:34:28,400 - SEND event to port 5001, logical clock: 162
+2025-03-05 16:34:28,571 - SEND event to port 5002, logical clock: 163
+2025-03-05 16:34:28,743 - INTERNAL event, logical clock: 164
+2025-03-05 16:34:28,910 - SEND event to port 5002, logical clock: 165
+2025-03-05 16:34:29,082 - SEND event to port 5002, logical clock: 166
+2025-03-05 16:34:29,254 - INTERNAL event, logical clock: 167
+2025-03-05 16:34:29,423 - SEND event to port 5002, logical clock: 168
+2025-03-05 16:34:29,595 - INTERNAL event, logical clock: 169
+2025-03-05 16:34:29,768 - SEND event to ALL machines, logical clock: 170
+2025-03-05 16:34:29,940 - INTERNAL event, logical clock: 171
+2025-03-05 16:34:30,109 - SEND event to port 5002, logical clock: 172
+2025-03-05 16:34:30,279 - INTERNAL event, logical clock: 173
+2025-03-05 16:34:30,451 - SEND event to port 5002, logical clock: 174
+2025-03-05 16:34:30,621 - SEND event to port 5001, logical clock: 175
+2025-03-05 16:34:30,793 - INTERNAL event, logical clock: 176
+2025-03-05 16:34:30,960 - SEND event to port 5002, logical clock: 177
+2025-03-05 16:34:31,129 - SEND event to ALL machines, logical clock: 178
+2025-03-05 16:34:31,298 - INTERNAL event, logical clock: 179
+2025-03-05 16:34:31,466 - SEND event to ALL machines, logical clock: 180
+2025-03-05 16:34:31,638 - SEND event to port 5002, logical clock: 181
+2025-03-05 16:34:31,807 - SEND event to ALL machines, logical clock: 182
+2025-03-05 16:34:31,979 - SEND event to port 5002, logical clock: 183
+2025-03-05 16:34:32,145 - INTERNAL event, logical clock: 184
+2025-03-05 16:34:32,313 - INTERNAL event, logical clock: 185
+2025-03-05 16:34:32,485 - SEND event to ALL machines, logical clock: 186
+2025-03-05 16:34:32,656 - SEND event to port 5002, logical clock: 187
+2025-03-05 16:34:32,825 - SEND event to port 5002, logical clock: 188
+2025-03-05 16:34:32,996 - INTERNAL event, logical clock: 189
+2025-03-05 16:34:33,167 - INTERNAL event, logical clock: 190
+2025-03-05 16:34:33,335 - SEND event to port 5001, logical clock: 191
+2025-03-05 16:34:33,507 - INTERNAL event, logical clock: 192
+2025-03-05 16:34:33,678 - SEND event to ALL machines, logical clock: 193
+2025-03-05 16:34:33,850 - SEND event to port 5002, logical clock: 194
+2025-03-05 16:34:34,022 - SEND event to port 5002, logical clock: 195
+2025-03-05 16:34:34,193 - SEND event to port 5001, logical clock: 196
+2025-03-05 16:34:34,362 - INTERNAL event, logical clock: 197
+2025-03-05 16:34:34,531 - SEND event to port 5001, logical clock: 198
+2025-03-05 16:34:34,703 - SEND event to port 5001, logical clock: 199
+2025-03-05 16:34:34,874 - INTERNAL event, logical clock: 200
+2025-03-05 16:34:35,046 - INTERNAL event, logical clock: 201
+2025-03-05 16:34:35,216 - INTERNAL event, logical clock: 202
+2025-03-05 16:34:35,386 - RECEIVE event, queue length: 0, logical clock: 203
+2025-03-05 16:34:35,557 - INTERNAL event, logical clock: 204
+2025-03-05 16:34:35,728 - SEND event to port 5001, logical clock: 205
+2025-03-05 16:34:35,900 - INTERNAL event, logical clock: 206
+2025-03-05 16:34:36,069 - SEND event to port 5002, logical clock: 207
+2025-03-05 16:34:36,241 - SEND event to ALL machines, logical clock: 208
+2025-03-05 16:34:36,409 - INTERNAL event, logical clock: 209
+2025-03-05 16:34:36,577 - SEND event to ALL machines, logical clock: 210
+2025-03-05 16:34:36,749 - SEND event to port 5002, logical clock: 211
+2025-03-05 16:34:36,920 - SEND event to port 5001, logical clock: 212
+2025-03-05 16:34:37,092 - SEND event to port 5001, logical clock: 213
+2025-03-05 16:34:37,259 - SEND event to port 5001, logical clock: 214
+2025-03-05 16:34:37,431 - SEND event to port 5001, logical clock: 215
+2025-03-05 16:34:37,600 - INTERNAL event, logical clock: 216
+2025-03-05 16:34:37,772 - RECEIVE event, queue length: 0, logical clock: 217
+2025-03-05 16:34:37,940 - SEND event to ALL machines, logical clock: 218
+2025-03-05 16:34:38,111 - SEND event to ALL machines, logical clock: 219
+2025-03-05 16:34:38,282 - INTERNAL event, logical clock: 220
+2025-03-05 16:34:38,454 - SEND event to ALL machines, logical clock: 221
+2025-03-05 16:34:38,623 - SEND event to port 5001, logical clock: 222
+2025-03-05 16:34:38,795 - SEND event to ALL machines, logical clock: 223
+2025-03-05 16:34:38,967 - INTERNAL event, logical clock: 224
+2025-03-05 16:34:39,136 - SEND event to port 5001, logical clock: 225
+2025-03-05 16:34:39,308 - SEND event to port 5001, logical clock: 226
+2025-03-05 16:34:39,477 - RECEIVE event, queue length: 0, logical clock: 227
+2025-03-05 16:34:39,649 - SEND event to ALL machines, logical clock: 228
+2025-03-05 16:34:39,817 - SEND event to port 5002, logical clock: 229
+2025-03-05 16:34:39,987 - SEND event to port 5002, logical clock: 230
+2025-03-05 16:34:40,159 - INTERNAL event, logical clock: 231
+2025-03-05 16:34:40,330 - INTERNAL event, logical clock: 232
+2025-03-05 16:34:40,502 - SEND event to port 5002, logical clock: 233
+2025-03-05 16:34:40,674 - INTERNAL event, logical clock: 234
+2025-03-05 16:34:40,846 - INTERNAL event, logical clock: 235
+2025-03-05 16:34:41,015 - SEND event to port 5002, logical clock: 236
+2025-03-05 16:34:41,183 - SEND event to port 5001, logical clock: 237
+2025-03-05 16:34:41,355 - SEND event to port 5002, logical clock: 238
+2025-03-05 16:34:41,525 - INTERNAL event, logical clock: 239
+2025-03-05 16:34:41,697 - SEND event to port 5002, logical clock: 240
+2025-03-05 16:34:41,869 - SEND event to port 5001, logical clock: 241
+2025-03-05 16:34:42,040 - INTERNAL event, logical clock: 242
+2025-03-05 16:34:42,208 - RECEIVE event, queue length: 0, logical clock: 243
+2025-03-05 16:34:42,377 - INTERNAL event, logical clock: 244
+2025-03-05 16:34:42,548 - INTERNAL event, logical clock: 245
+2025-03-05 16:34:42,720 - INTERNAL event, logical clock: 246
+2025-03-05 16:34:42,891 - SEND event to port 5001, logical clock: 247
+2025-03-05 16:34:43,062 - INTERNAL event, logical clock: 248
+2025-03-05 16:34:43,230 - INTERNAL event, logical clock: 249
+2025-03-05 16:34:43,402 - SEND event to ALL machines, logical clock: 250
+2025-03-05 16:34:43,570 - SEND event to port 5001, logical clock: 251
+2025-03-05 16:34:43,740 - SEND event to ALL machines, logical clock: 252
+2025-03-05 16:34:43,911 - SEND event to ALL machines, logical clock: 253
+2025-03-05 16:34:44,083 - INTERNAL event, logical clock: 254
+2025-03-05 16:34:44,252 - INTERNAL event, logical clock: 255
+2025-03-05 16:34:44,424 - SEND event to port 5002, logical clock: 256
+2025-03-05 16:34:44,592 - SEND event to port 5001, logical clock: 257
+2025-03-05 16:34:44,763 - INTERNAL event, logical clock: 258
+2025-03-05 16:34:44,934 - INTERNAL event, logical clock: 259
+2025-03-05 16:34:45,102 - RECEIVE event, queue length: 0, logical clock: 260
+2025-03-05 16:34:45,274 - SEND event to ALL machines, logical clock: 261
+2025-03-05 16:34:45,442 - SEND event to ALL machines, logical clock: 262
+2025-03-05 16:34:45,613 - SEND event to ALL machines, logical clock: 263
+2025-03-05 16:34:45,785 - SEND event to port 5001, logical clock: 264
+2025-03-05 16:34:45,957 - SEND event to ALL machines, logical clock: 265
+2025-03-05 16:34:46,125 - SEND event to ALL machines, logical clock: 266
+2025-03-05 16:34:46,296 - SEND event to port 5001, logical clock: 267
+2025-03-05 16:34:46,465 - INTERNAL event, logical clock: 268
+2025-03-05 16:34:46,634 - SEND event to port 5001, logical clock: 269
+2025-03-05 16:34:46,803 - SEND event to port 5002, logical clock: 270
+2025-03-05 16:34:46,974 - SEND event to port 5001, logical clock: 271
+2025-03-05 16:34:47,142 - INTERNAL event, logical clock: 272
+2025-03-05 16:34:47,309 - SEND event to ALL machines, logical clock: 273
+2025-03-05 16:34:47,481 - SEND event to ALL machines, logical clock: 274
+2025-03-05 16:34:47,652 - INTERNAL event, logical clock: 275
+2025-03-05 16:34:47,819 - SEND event to port 5002, logical clock: 276
+2025-03-05 16:34:47,991 - SEND event to port 5002, logical clock: 277
+2025-03-05 16:34:48,163 - INTERNAL event, logical clock: 278
+2025-03-05 16:34:48,334 - SEND event to port 5001, logical clock: 279
+2025-03-05 16:34:48,503 - SEND event to port 5002, logical clock: 280
+2025-03-05 16:34:48,673 - SEND event to port 5002, logical clock: 281
+2025-03-05 16:34:48,842 - SEND event to port 5002, logical clock: 282
+2025-03-05 16:34:49,013 - INTERNAL event, logical clock: 283
+2025-03-05 16:34:49,184 - INTERNAL event, logical clock: 284
+2025-03-05 16:34:49,356 - INTERNAL event, logical clock: 285
+2025-03-05 16:34:49,528 - SEND event to ALL machines, logical clock: 286
+2025-03-05 16:34:49,700 - SEND event to port 5001, logical clock: 287
+2025-03-05 16:34:49,871 - INTERNAL event, logical clock: 288
+2025-03-05 16:34:50,042 - SEND event to port 5002, logical clock: 289
+2025-03-05 16:34:50,213 - SEND event to ALL machines, logical clock: 290
+2025-03-05 16:34:50,380 - SEND event to port 5001, logical clock: 291
+2025-03-05 16:34:50,552 - INTERNAL event, logical clock: 292
+2025-03-05 16:34:50,724 - INTERNAL event, logical clock: 293
+2025-03-05 16:34:50,895 - SEND event to port 5001, logical clock: 294
+2025-03-05 16:34:51,067 - SEND event to port 5001, logical clock: 295
+2025-03-05 16:34:51,239 - INTERNAL event, logical clock: 296
+2025-03-05 16:34:51,406 - SEND event to ALL machines, logical clock: 297
+2025-03-05 16:34:51,574 - INTERNAL event, logical clock: 298
+2025-03-05 16:34:51,743 - INTERNAL event, logical clock: 299
+2025-03-05 16:34:51,910 - INTERNAL event, logical clock: 300
+2025-03-05 16:34:52,078 - SEND event to port 5002, logical clock: 301
+2025-03-05 16:34:52,245 - INTERNAL event, logical clock: 302
+2025-03-05 16:34:52,417 - SEND event to ALL machines, logical clock: 303
+2025-03-05 16:34:52,586 - INTERNAL event, logical clock: 304
+2025-03-05 16:34:52,758 - SEND event to port 5001, logical clock: 305
+2025-03-05 16:34:52,927 - INTERNAL event, logical clock: 306
+2025-03-05 16:34:53,099 - INTERNAL event, logical clock: 307
+2025-03-05 16:34:53,271 - SEND event to ALL machines, logical clock: 308
+2025-03-05 16:34:53,442 - INTERNAL event, logical clock: 309
+2025-03-05 16:34:53,611 - INTERNAL event, logical clock: 310
+2025-03-05 16:34:53,783 - INTERNAL event, logical clock: 311
+2025-03-05 16:34:53,954 - RECEIVE event, queue length: 0, logical clock: 312
+2025-03-05 16:34:54,127 - SEND event to ALL machines, logical clock: 313
+2025-03-05 16:34:54,297 - SEND event to port 5001, logical clock: 314
+2025-03-05 16:34:54,465 - INTERNAL event, logical clock: 315
+2025-03-05 16:34:54,637 - RECEIVE event, queue length: 0, logical clock: 316
+2025-03-05 16:34:54,805 - INTERNAL event, logical clock: 317
+2025-03-05 16:34:54,977 - RECEIVE event, queue length: 0, logical clock: 318
+2025-03-05 16:34:55,145 - SEND event to port 5001, logical clock: 319
+2025-03-05 16:34:55,313 - RECEIVE event, queue length: 0, logical clock: 320
+2025-03-05 16:34:55,483 - SEND event to port 5002, logical clock: 321
+2025-03-05 16:34:55,654 - SEND event to ALL machines, logical clock: 322
+2025-03-05 16:34:55,826 - SEND event to port 5002, logical clock: 323
+2025-03-05 16:34:55,997 - SEND event to port 5002, logical clock: 324
+2025-03-05 16:34:56,169 - INTERNAL event, logical clock: 325
+2025-03-05 16:34:56,341 - SEND event to port 5001, logical clock: 326
+2025-03-05 16:34:56,511 - SEND event to port 5002, logical clock: 327
+2025-03-05 16:34:56,682 - SEND event to port 5001, logical clock: 328
+2025-03-05 16:34:56,853 - INTERNAL event, logical clock: 329
+2025-03-05 16:34:57,021 - INTERNAL event, logical clock: 330
+2025-03-05 16:34:57,192 - SEND event to ALL machines, logical clock: 331
+2025-03-05 16:34:57,364 - SEND event to port 5002, logical clock: 332
+2025-03-05 16:34:57,532 - INTERNAL event, logical clock: 333
+2025-03-05 16:34:57,701 - SEND event to port 5002, logical clock: 334
+2025-03-05 16:34:57,873 - SEND event to port 5002, logical clock: 335
+2025-03-05 16:34:58,044 - SEND event to port 5001, logical clock: 336
+2025-03-05 16:34:58,215 - INTERNAL event, logical clock: 337
+2025-03-05 16:34:58,387 - INTERNAL event, logical clock: 338
+2025-03-05 16:34:58,554 - SEND event to port 5001, logical clock: 339
+2025-03-05 16:34:58,726 - RECEIVE event, queue length: 0, logical clock: 340
+2025-03-05 16:34:58,897 - SEND event to ALL machines, logical clock: 341
+2025-03-05 16:34:58,904 - Machine 2 stopped. Final logical clock: 341

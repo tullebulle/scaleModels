@@ -1,6 +1,6 @@
 import time
 import random
-import threading
+import multiprocessing
 import argparse
 import os
 import glob
@@ -34,6 +34,13 @@ def clean_log_files(experiment_number=None):
             print(f"Removed old log file: {file}")
         except Exception as e:
             print(f"Error removing {file}: {e}")
+
+def run_vm(vm):
+    """Function to run a virtual machine in a separate process."""
+    try:
+        vm.run()
+    except Exception as e:
+        print(f"Error in VM process: {e}")
 
 def run_experiment(experiment_number, duration=60, custom_clock_rates=None, communication_probability=0.3):
     """
@@ -79,13 +86,13 @@ def run_experiment(experiment_number, duration=60, custom_clock_rates=None, comm
         machines.append(vm)
         print(f"Machine {i} created with clock rate {clock_rate}")
     
-    # Start the machines in separate threads
-    threads = []
+    # Start the machines in separate processes
+    processes = []
     for vm in machines:
-        thread = threading.Thread(target=vm.run)
-        thread.daemon = True
-        thread.start()
-        threads.append(thread)
+        process = multiprocessing.Process(target=run_vm, args=(vm,))
+        process.daemon = True
+        process.start()
+        processes.append(process)
     
     # Let the simulation run for the specified duration
     try:
@@ -105,9 +112,13 @@ def run_experiment(experiment_number, duration=60, custom_clock_rates=None, comm
     except KeyboardInterrupt:
         print("Simulation interrupted")
     
-    # Stop all machines
+    # Stop all machines and terminate processes
     for vm in machines:
         vm.stop()
+    
+    for process in processes:
+        process.terminate()
+        process.join(timeout=2)
     
     print(f"Experiment {experiment_number} complete. Check the logs folder for results.")
     
@@ -138,10 +149,18 @@ def main():
             "communication_probability": 0.9},
         11: {"custom_clock_rates": [5,3,2],
             "communication_probability": 0.9},
+        12: {"custom_clock_rates": [1,3,6],
+            "communication_probability": 0.1},
+        13: {"custom_clock_rates": [1,3,6],
+            "communication_probability": 0.3},
+        14: {"custom_clock_rates": [1,3,6],
+            "communication_probability": 0.6},
+        15: {"custom_clock_rates": [1,3,6],
+            "communication_probability": 0.9},
     }
 
     parser = argparse.ArgumentParser(description='Run distributed system simulation experiments')
-    parser.add_argument('--experiment', type=int, choices=range(1, len(EXPERIMENTS)+1), help='Run a specific experiment (1-5)')
+    parser.add_argument('--experiment', type=int, choices=range(1, len(EXPERIMENTS)+1), help='Run a specific experiment (1-15)')
     parser.add_argument('--duration', type=int, default=60, help='Duration in seconds for each experiment')
     parser.add_argument('--clean', action='store_true', help='Clean all log files before running')
     args = parser.parse_args()
@@ -155,6 +174,9 @@ def main():
         if not args.experiment:
             return    
     
+    # Set the start method for multiprocessing
+    multiprocessing.set_start_method('spawn', force=True)
+    
     experiment_numbers = [args.experiment] if args.experiment else [i+1 for i in range(len(EXPERIMENTS))]
     for experiment_number in experiment_numbers:
         custom_clock_rates = EXPERIMENTS[experiment_number]['custom_clock_rates']
@@ -163,7 +185,9 @@ def main():
         if not custom_clock_rates: custom_clock_rates = [random.randint(1, 6) for _ in range(3)]
         if not communication_probability: communication_probability = 0.3
         
-        run_experiment(experiment_number, custom_clock_rates=custom_clock_rates, communication_probability=communication_probability)
+        run_experiment(experiment_number, duration=args.duration, 
+                      custom_clock_rates=custom_clock_rates, 
+                      communication_probability=communication_probability)
 
 if __name__ == "__main__":
     main()
