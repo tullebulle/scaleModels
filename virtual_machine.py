@@ -8,7 +8,7 @@ from datetime import datetime
 import os
 
 class VirtualMachine:
-    def __init__(self, machine_id, clock_rate, port, other_ports, communication_probability=0.3, experiment_number=None):
+    def __init__(self, machine_id, clock_rate, port, other_ports, communication_probability=0.3, experiment_number = 1):
         """
         Initialize a virtual machine.
         
@@ -30,26 +30,18 @@ class VirtualMachine:
         self.message_queue = queue.Queue()
         self.running = False
         
-        # Ensure logs directory exists
-        if not os.path.exists("logs"):
-            os.makedirs("logs")
-        
         # Set up logging
         logging.basicConfig(level=logging.INFO)
         self.logger = logging.getLogger(f"VM-{machine_id}")
         self.logger.handlers = []  # Remove default handlers
         
-        # Use experiment number in log file name if provided
-        if experiment_number is not None:
-            log_filename = os.path.join("logs", f"experiment_{experiment_number}_vm_{machine_id}.log")
-        else:
-            log_filename = os.path.join("logs", f"vm_{machine_id}.log")
-        
+        # Use experiment number in log file name
+        log_filename = os.path.join("logs", f"experiment_{experiment_number}_vm_{machine_id}.log")
+  
         file_handler = logging.FileHandler(log_filename)
         formatter = logging.Formatter('%(asctime)s - %(message)s')
         file_handler.setFormatter(formatter)
         self.logger.addHandler(file_handler)
-        self.logger.setLevel(logging.INFO)
         
         # Set up socket for listening
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -82,22 +74,22 @@ class VirtualMachine:
     
     def listen_for_messages(self):
         """Listen for incoming messages and add them to the queue."""
-        self.server_socket.settimeout(1.0)  # Set timeout to allow checking running flag
-        
+        # self.server_socket.settimeout(1.0)  # Set timeout to allow checking running flag
         while self.running:
             try:
-                client_socket, addr = self.server_socket.accept()
+                client_socket, _ = self.server_socket.accept()
                 threading.Thread(target=self.handle_client, args=(client_socket,), daemon=True).start()
             except socket.timeout:
-                continue  # Just a timeout, continue the loop
+                self.logger.error("A timeout occured.") 
+                continue  # Just a timeout, continue the loop, but this shouldn't happen
             except Exception as e:
                 if self.running:
                     self.logger.error(f"Error accepting connection: {e}")
+                break
     
     def handle_client(self, client_socket):
         """Handle messages from a connected client."""
-        client_socket.settimeout(1.0)  # Set timeout to allow checking running flag
-        
+        # client_socket.settimeout(1.0)  # Set timeout to allow checking running flag
         while self.running:
             try:
                 data = client_socket.recv(1024)
@@ -108,7 +100,8 @@ class VirtualMachine:
                 received_time = int(data.decode())
                 self.message_queue.put(received_time)
             except socket.timeout:
-                continue  # Just a timeout, continue the loop
+                self.logger.error("A timeout occured.") 
+                continue  # Just a timeout, continue the loop, but this shouldn't happen
             except Exception as e:
                 if self.running:
                     self.logger.error(f"Error handling client: {e}")
@@ -142,6 +135,8 @@ class VirtualMachine:
                             self.logger.info(f"Reconnected to port {port} and sent message")
                         except Exception as reconnect_error:
                             self.logger.error(f"Failed to reconnect to port {port}: {reconnect_error}")
+                else:
+                    self.logger.error(f"Trying to log to invalid port {port}.")
     
     def run(self):
         """Run the virtual machine."""
@@ -155,6 +150,7 @@ class VirtualMachine:
         time.sleep(2)
         
         # Connect to other machines
+        # The sockets of the connection get stored in self.connections
         self.connect_to_others()
         
         self.logger.info(f"Machine {self.machine_id} starting with clock rate {self.clock_rate}")
@@ -172,6 +168,8 @@ class VirtualMachine:
             else:
                 # No message, generate random event
                 event = random.random()  # Generate a random float between 0 and 1
+                self.logical_clock += 1
+
                 
                 if event < self.communication_probability:
                     # Communication events (30% by default)
@@ -179,26 +177,22 @@ class VirtualMachine:
                     
                     if sub_event == 1:
                         # Send to one machine
-                        target_port = random.choice(self.other_ports)
-                        self.logical_clock += 1
+                        target_port = self.other_ports[0]
                         self.send_message([target_port])
                         self.logger.info(f"SEND event to port {target_port}, logical clock: {self.logical_clock}")
                     
                     elif sub_event == 2:
                         # Send to another machine
-                        target_port = random.choice(self.other_ports)
-                        self.logical_clock += 1
+                        target_port = self.other_ports[1]
                         self.send_message([target_port])
                         self.logger.info(f"SEND event to port {target_port}, logical clock: {self.logical_clock}")
                     
                     elif sub_event == 3:
                         # Send to all machines
-                        self.logical_clock += 1
                         self.send_message(self.other_ports)
                         self.logger.info(f"SEND event to ALL machines, logical clock: {self.logical_clock}")
                 else:
                     # Internal event
-                    self.logical_clock += 1
                     self.logger.info(f"INTERNAL event, logical clock: {self.logical_clock}")
             
             # Sleep to maintain clock rate
@@ -206,6 +200,8 @@ class VirtualMachine:
             sleep_time = (1.0 / self.clock_rate) - elapsed
             if sleep_time > 0:
                 time.sleep(sleep_time)
+            else:
+                self.logger.error(f"Handling the time step took longer than the clock time, at logical clock: {self.logical_clock}")
     
     def stop(self):
         """Stop the virtual machine."""
@@ -216,14 +212,15 @@ class VirtualMachine:
             for conn in self.connections.values():
                 try:
                     conn.close()
-                except:
-                    pass
+                except Exception as e:
+                    self.logger.info(f'Error closing connection: {e}')
             self.connections.clear()
         
         # Close server socket
         try:
             self.server_socket.close()
-        except:
-            pass
+        except Exception as e:
+            self.logger.info(f'Error closing server socket: {e}')
+
         
         self.logger.info(f"Machine {self.machine_id} stopped. Final logical clock: {self.logical_clock}")
