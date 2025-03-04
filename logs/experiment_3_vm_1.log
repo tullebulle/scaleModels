@@ -1,0 +1,12 @@
+2025-03-04 15:22:16,273 - Connected to machine on port 5001
+2025-03-04 15:22:16,279 - Connected to machine on port 5003
+2025-03-04 15:22:16,279 - Machine 1 starting with clock rate 1
+2025-03-04 15:22:16,280 - RECEIVE event, queue length: 0, logical clock: 2
+2025-03-04 15:22:17,284 - RECEIVE event, queue length: 1, logical clock: 5
+2025-03-04 15:22:18,286 - RECEIVE event, queue length: 3, logical clock: 6
+2025-03-04 15:22:19,291 - RECEIVE event, queue length: 4, logical clock: 8
+2025-03-04 15:22:20,296 - RECEIVE event, queue length: 4, logical clock: 11
+2025-03-04 15:22:21,301 - RECEIVE event, queue length: 5, logical clock: 13
+2025-03-04 15:22:22,306 - RECEIVE event, queue length: 6, logical clock: 16
+2025-03-04 15:22:23,307 - RECEIVE event, queue length: 7, logical clock: 17
+2025-03-04 15:22:24,273 - Machine 1 stopped. Final logical clock: 17

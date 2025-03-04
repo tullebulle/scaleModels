@@ -1,0 +1,28 @@
+2025-03-04 15:22:28,301 - Connected to machine on port 5001
+2025-03-04 15:22:28,305 - Connected to machine on port 5002
+2025-03-04 15:22:28,305 - Machine 2 starting with clock rate 3
+2025-03-04 15:22:28,305 - INTERNAL event, logical clock: 1
+2025-03-04 15:22:28,644 - RECEIVE event, queue length: 0, logical clock: 3
+2025-03-04 15:22:28,982 - RECEIVE event, queue length: 0, logical clock: 5
+2025-03-04 15:22:29,321 - SEND event to port 5001, logical clock: 6
+2025-03-04 15:22:29,659 - INTERNAL event, logical clock: 7
+2025-03-04 15:22:29,997 - RECEIVE event, queue length: 0, logical clock: 9
+2025-03-04 15:22:30,335 - RECEIVE event, queue length: 0, logical clock: 10
+2025-03-04 15:22:30,674 - RECEIVE event, queue length: 0, logical clock: 11
+2025-03-04 15:22:31,010 - INTERNAL event, logical clock: 12
+2025-03-04 15:22:31,344 - SEND event to port 5002, logical clock: 13
+2025-03-04 15:22:31,680 - INTERNAL event, logical clock: 14
+2025-03-04 15:22:32,018 - INTERNAL event, logical clock: 15
+2025-03-04 15:22:32,356 - INTERNAL event, logical clock: 16
+2025-03-04 15:22:32,695 - INTERNAL event, logical clock: 17
+2025-03-04 15:22:33,031 - SEND event to ALL machines, logical clock: 18
+2025-03-04 15:22:33,369 - INTERNAL event, logical clock: 19
+2025-03-04 15:22:33,708 - RECEIVE event, queue length: 0, logical clock: 22
+2025-03-04 15:22:34,046 - INTERNAL event, logical clock: 23
+2025-03-04 15:22:34,381 - INTERNAL event, logical clock: 24
+2025-03-04 15:22:34,720 - RECEIVE event, queue length: 0, logical clock: 25
+2025-03-04 15:22:35,058 - SEND event to port 5002, logical clock: 26
+2025-03-04 15:22:35,395 - RECEIVE event, queue length: 0, logical clock: 27
+2025-03-04 15:22:35,732 - INTERNAL event, logical clock: 28
+2025-03-04 15:22:36,070 - RECEIVE event, queue length: 0, logical clock: 30
+2025-03-04 15:22:36,297 - Machine 2 stopped. Final logical clock: 30
