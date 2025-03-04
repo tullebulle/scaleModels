@@ -48,10 +48,6 @@
 - Using queue.Queue for thread-safe message queuing
 - Using Python's logging module for structured logging
 
-## Experimental Observations
-
-(This section will be filled in after running the experiments)
-
 ## Implementation Details
 
 ### Robust Communication
@@ -146,3 +142,8 @@ We expect to observe:
 5. Uniform clock rates should result in more consistent logical clock progression across machines
 
 These hypotheses will be tested and analyzed after running the experiments.
+
+
+## Experimental Observations
+
+(This section will be filled in after running the experiments)

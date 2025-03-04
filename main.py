@@ -4,7 +4,7 @@ import threading
 import argparse
 import os
 import glob
-import shutil
+
 from virtual_machine import VirtualMachine
 
 def ensure_logs_directory():
@@ -19,9 +19,7 @@ def clean_log_files(experiment_number=None):
     
     Args:
         experiment_number: If provided, only remove logs for this experiment
-    """
-    ensure_logs_directory()
-    
+    """    
     if experiment_number:
         # Remove logs for a specific experiment
         pattern = os.path.join("logs", f"experiment_{experiment_number}_vm_*.log")
@@ -48,9 +46,6 @@ def run_experiment(experiment_number, duration=60, custom_clock_rates=None, comm
         communication_probability: Probability of send events (1-3 out of 10)
     """
     print(f"\n=== Starting Experiment {experiment_number} ===")
-    
-    # Ensure logs directory exists
-    ensure_logs_directory()
     
     # Clean up old log files for this experiment
     clean_log_files(experiment_number)
@@ -98,11 +93,13 @@ def run_experiment(experiment_number, duration=60, custom_clock_rates=None, comm
         print(f"Simulation running for {duration} seconds...")
         
         # Use a more precise timing approach
-        while time.time() - start_time < duration:
+        while True:
             remaining = duration - (time.time() - start_time)
             if remaining > 0:
                 time.sleep(min(1.0, remaining))  # Sleep in smaller increments
-                
+            else:
+                break  
+
         actual_duration = time.time() - start_time
         print(f"Simulation completed after {actual_duration:.2f} seconds")
     except KeyboardInterrupt:
@@ -133,41 +130,25 @@ def main():
         if not args.experiment:
             return
     
-    if args.experiment:
+    
+    experiments = [args.experiment] if args.experiment else [1,2,3,4,5]
+    for experiment in experiments:
         # Run a specific experiment
-        if args.experiment == 1:
+        if experiment == 1:
             # Default settings
             run_experiment(1, args.duration)
-        elif args.experiment == 2:
+        elif experiment == 2:
             # Faster clocks
             run_experiment(2, args.duration, custom_clock_rates=[random.randint(4, 6) for _ in range(3)])
-        elif args.experiment == 3:
+        elif experiment == 3:
             # More communication
             run_experiment(3, args.duration, communication_probability=0.6)
-        elif args.experiment == 4:
+        elif experiment == 4:
             # Uniform clock rate
             run_experiment(4, args.duration, custom_clock_rates=[3, 3, 3])
-        elif args.experiment == 5:
+        elif experiment == 5:
             # Extreme clock difference
             run_experiment(5, args.duration, custom_clock_rates=[1, 3, 6])
-    else:
-        # Run all experiments
-        for i in range(1, 6):
-            if i == 1:
-                # Default settings
-                run_experiment(1, args.duration)
-            elif i == 2:
-                # Faster clocks
-                run_experiment(2, args.duration, custom_clock_rates=[random.randint(4, 6) for _ in range(3)])
-            elif i == 3:
-                # More communication
-                run_experiment(3, args.duration, communication_probability=0.6)
-            elif i == 4:
-                # Uniform clock rate
-                run_experiment(4, args.duration, custom_clock_rates=[3, 3, 3])
-            elif i == 5:
-                # Extreme clock difference
-                run_experiment(5, args.duration, custom_clock_rates=[1, 3, 6])
 
 if __name__ == "__main__":
     main()
