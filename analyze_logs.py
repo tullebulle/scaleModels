@@ -14,6 +14,7 @@ def ensure_logs_directory():
 def parse_log_file(filename):
     """Parse a log file and extract timestamps, event types, and logical clock values."""
     events = []
+    machine_clock_rate = None
     pattern = r'(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3}) - (.*)'
     
     try:
@@ -37,6 +38,9 @@ def parse_log_file(filename):
                         event_type = 'RECEIVE'
                         logical_clock = int(message.split('logical clock: ')[1])
                         queue_length = int(message.split('queue length: ')[1].split(',')[0])
+                    elif 'starting with clock rate' in message:
+                        machine_clock_rate = int(message[-1])
+                        continue
                     else:
                         continue  # Skip other log messages
                     
@@ -49,7 +53,7 @@ def parse_log_file(filename):
     except FileNotFoundError:
         print(f"Warning: Log file {filename} not found")
     
-    return events
+    return events, machine_clock_rate
 
 def analyze_experiment(experiment_number):
     """Analyze the logs from a specific experiment."""
@@ -69,12 +73,13 @@ def analyze_experiment(experiment_number):
     logs = []
     for i in range(3):
         filename = os.path.join("logs", f"experiment_{experiment_number}_vm_{i}.log")
-        events = parse_log_file(filename)
-        logs.append(events)
+        events, clock_rate = parse_log_file(filename)
+        logs.append((events, clock_rate))
         print(f"Machine {i}: {len(events)} events recorded")
     
     # Calculate statistics
-    for i, events in enumerate(logs):
+    for i, info in enumerate(logs):
+        events, _ = info
         if not events:
             print(f"No events found for machine {i}")
             continue
@@ -111,14 +116,15 @@ def analyze_experiment(experiment_number):
     
     # Plot logical clock progression
     plt.figure(figsize=(10, 6))
-    for i, events in enumerate(logs):
+    for i, info in enumerate(logs):
+        events, clock_rate = info
         if not events:
             continue
             
         timestamps = [(e['timestamp'] - events[0]['timestamp']).total_seconds() for e in events]
         logical_clocks = [e['logical_clock'] for e in events]
         
-        plt.plot(timestamps, logical_clocks, label=f"Machine {i}")
+        plt.plot(timestamps, logical_clocks, label=f"Machine {i}. Clock rate {clock_rate}.")
     
     plt.xlabel('Time (seconds)')
     plt.ylabel('Logical Clock Value')
@@ -131,7 +137,8 @@ def analyze_experiment(experiment_number):
     
     # Plot queue lengths
     plt.figure(figsize=(10, 6))
-    for i, events in enumerate(logs):
+    for i, info in enumerate(logs):
+        events, clock_rate = info
         if not events:
             continue
             
@@ -142,7 +149,7 @@ def analyze_experiment(experiment_number):
         timestamps = [(e['timestamp'] - events[0]['timestamp']).total_seconds() for e in receive_events]
         queue_lengths = [e['queue_length'] for e in receive_events]
         
-        plt.plot(timestamps, queue_lengths, label=f"Machine {i}")
+        plt.plot(timestamps, queue_lengths, label=f"Machine {i}. Clock rate {clock_rate}.")
     
     plt.xlabel('Time (seconds)')
     plt.ylabel('Queue Length')

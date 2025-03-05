@@ -1,0 +1,62 @@
+2025-03-04 21:45:23,453 - Connected to machine on port 5002
+2025-03-04 21:45:23,455 - Connected to machine on port 5003
+2025-03-04 21:45:23,455 - Machine 0 starting with clock rate 1
+2025-03-04 21:45:23,455 - INTERNAL event, logical clock: 1
+2025-03-04 21:45:24,459 - INTERNAL event, logical clock: 2
+2025-03-04 21:45:25,464 - RECEIVE event, queue length: 0, logical clock: 8
+2025-03-04 21:45:26,469 - INTERNAL event, logical clock: 9
+2025-03-04 21:45:27,474 - RECEIVE event, queue length: 2, logical clock: 20
+2025-03-04 21:45:28,478 - RECEIVE event, queue length: 2, logical clock: 21
+2025-03-04 21:45:29,483 - RECEIVE event, queue length: 2, logical clock: 22
+2025-03-04 21:45:30,485 - RECEIVE event, queue length: 3, logical clock: 31
+2025-03-04 21:45:31,490 - RECEIVE event, queue length: 3, logical clock: 34
+2025-03-04 21:45:32,493 - RECEIVE event, queue length: 4, logical clock: 38
+2025-03-04 21:45:33,496 - RECEIVE event, queue length: 4, logical clock: 40
+2025-03-04 21:45:34,501 - RECEIVE event, queue length: 5, logical clock: 45
+2025-03-04 21:45:35,503 - RECEIVE event, queue length: 5, logical clock: 51
+2025-03-04 21:45:36,508 - RECEIVE event, queue length: 6, logical clock: 53
+2025-03-04 21:45:37,513 - RECEIVE event, queue length: 6, logical clock: 59
+2025-03-04 21:45:38,518 - RECEIVE event, queue length: 7, logical clock: 61
+2025-03-04 21:45:39,524 - RECEIVE event, queue length: 8, logical clock: 62
+2025-03-04 21:45:40,528 - RECEIVE event, queue length: 7, logical clock: 66
+2025-03-04 21:45:41,529 - RECEIVE event, queue length: 7, logical clock: 68
+2025-03-04 21:45:42,531 - RECEIVE event, queue length: 8, logical clock: 78
+2025-03-04 21:45:43,536 - RECEIVE event, queue length: 9, logical clock: 81
+2025-03-04 21:45:44,541 - RECEIVE event, queue length: 9, logical clock: 85
+2025-03-04 21:45:45,545 - RECEIVE event, queue length: 9, logical clock: 87
+2025-03-04 21:45:46,548 - RECEIVE event, queue length: 12, logical clock: 91
+2025-03-04 21:45:47,553 - RECEIVE event, queue length: 12, logical clock: 92
+2025-03-04 21:45:48,558 - RECEIVE event, queue length: 14, logical clock: 104
+2025-03-04 21:45:49,563 - RECEIVE event, queue length: 15, logical clock: 110
+2025-03-04 21:45:50,564 - RECEIVE event, queue length: 16, logical clock: 111
+2025-03-04 21:45:51,564 - RECEIVE event, queue length: 18, logical clock: 112
+2025-03-04 21:45:52,569 - RECEIVE event, queue length: 21, logical clock: 117
+2025-03-04 21:45:53,574 - RECEIVE event, queue length: 21, logical clock: 118
+2025-03-04 21:45:54,577 - RECEIVE event, queue length: 22, logical clock: 128
+2025-03-04 21:45:55,581 - RECEIVE event, queue length: 23, logical clock: 132
+2025-03-04 21:45:56,586 - RECEIVE event, queue length: 24, logical clock: 134
+2025-03-04 21:45:57,591 - RECEIVE event, queue length: 27, logical clock: 135
+2025-03-04 21:45:58,596 - RECEIVE event, queue length: 26, logical clock: 137
+2025-03-04 21:45:59,600 - RECEIVE event, queue length: 27, logical clock: 140
+2025-03-04 21:46:00,605 - RECEIVE event, queue length: 29, logical clock: 141
+2025-03-04 21:46:01,609 - RECEIVE event, queue length: 30, logical clock: 146
+2025-03-04 21:46:02,614 - RECEIVE event, queue length: 29, logical clock: 147
+2025-03-04 21:46:03,617 - RECEIVE event, queue length: 28, logical clock: 152
+2025-03-04 21:46:04,621 - RECEIVE event, queue length: 29, logical clock: 153
+2025-03-04 21:46:05,626 - RECEIVE event, queue length: 29, logical clock: 155
+2025-03-04 21:46:06,630 - RECEIVE event, queue length: 30, logical clock: 157
+2025-03-04 21:46:07,635 - RECEIVE event, queue length: 30, logical clock: 162
+2025-03-04 21:46:08,640 - RECEIVE event, queue length: 31, logical clock: 163
+2025-03-04 21:46:09,641 - RECEIVE event, queue length: 32, logical clock: 165
+2025-03-04 21:46:10,643 - RECEIVE event, queue length: 31, logical clock: 169
+2025-03-04 21:46:11,646 - RECEIVE event, queue length: 31, logical clock: 170
+2025-03-04 21:46:12,647 - RECEIVE event, queue length: 31, logical clock: 172
+2025-03-04 21:46:13,648 - RECEIVE event, queue length: 30, logical clock: 173
+2025-03-04 21:46:14,649 - RECEIVE event, queue length: 29, logical clock: 176
+2025-03-04 21:46:15,653 - RECEIVE event, queue length: 29, logical clock: 183
+2025-03-04 21:46:16,658 - RECEIVE event, queue length: 29, logical clock: 184
+2025-03-04 21:46:17,659 - RECEIVE event, queue length: 29, logical clock: 186
+2025-03-04 21:46:18,659 - RECEIVE event, queue length: 30, logical clock: 190
+2025-03-04 21:46:19,665 - RECEIVE event, queue length: 29, logical clock: 195
+2025-03-04 21:46:20,665 - RECEIVE event, queue length: 29, logical clock: 196
+2025-03-04 21:46:21,452 - Machine 0 stopped. Final logical clock: 196

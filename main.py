@@ -115,8 +115,33 @@ def run_experiment(experiment_number, duration=60, custom_clock_rates=None, comm
     time.sleep(2)
 
 def main():
+    EXPERIMENTS = {
+        1: {"custom_clock_rates": None,
+            "communication_probability": None},
+        2: {"custom_clock_rates": [6,4,4],
+            "communication_probability": None},
+        3: {"custom_clock_rates": [3,3,3],
+            "communication_probability": None},
+        4: {"custom_clock_rates": [1,3,6],
+            "communication_probability": None},
+        5: {"custom_clock_rates": [5,3,2],
+            "communication_probability": None},
+        6: {"custom_clock_rates": [5,3,2],
+            "communication_probability": 0.6},
+        7: {"custom_clock_rates": [3,3,3],
+            "communication_probability": 0.9},
+        8: {"custom_clock_rates": [4,4,6],
+            "communication_probability": 0.9},
+        9: {"custom_clock_rates": [1,1,6],
+            "communication_probability": 0.9},
+        10: {"custom_clock_rates": [1,4,6],
+            "communication_probability": 0.9},
+        11: {"custom_clock_rates": [5,3,2],
+            "communication_probability": 0.9},
+    }
+
     parser = argparse.ArgumentParser(description='Run distributed system simulation experiments')
-    parser.add_argument('--experiment', type=int, choices=range(1, 6), help='Run a specific experiment (1-5)')
+    parser.add_argument('--experiment', type=int, choices=range(1, len(EXPERIMENTS)+1), help='Run a specific experiment (1-5)')
     parser.add_argument('--duration', type=int, default=60, help='Duration in seconds for each experiment')
     parser.add_argument('--clean', action='store_true', help='Clean all log files before running')
     args = parser.parse_args()
@@ -128,27 +153,17 @@ def main():
         clean_log_files()
         print("All log files cleaned.")
         if not args.experiment:
-            return
+            return    
     
-    
-    experiments = [args.experiment] if args.experiment else [1,2,3,4,5]
-    for experiment in experiments:
-        # Run a specific experiment
-        if experiment == 1:
-            # Default settings
-            run_experiment(1, args.duration)
-        elif experiment == 2:
-            # Faster clocks
-            run_experiment(2, args.duration, custom_clock_rates=[random.randint(4, 6) for _ in range(3)])
-        elif experiment == 3:
-            # More communication
-            run_experiment(3, args.duration, communication_probability=0.6)
-        elif experiment == 4:
-            # Uniform clock rate
-            run_experiment(4, args.duration, custom_clock_rates=[3, 3, 3])
-        elif experiment == 5:
-            # Extreme clock difference
-            run_experiment(5, args.duration, custom_clock_rates=[1, 3, 6])
+    experiment_numbers = [args.experiment] if args.experiment else [i+1 for i in range(len(EXPERIMENTS))]
+    for experiment_number in experiment_numbers:
+        custom_clock_rates = EXPERIMENTS[experiment_number]['custom_clock_rates']
+        communication_probability = EXPERIMENTS[experiment_number]['communication_probability']
+
+        if not custom_clock_rates: custom_clock_rates = [random.randint(1, 6) for _ in range(3)]
+        if not communication_probability: communication_probability = 0.3
+        
+        run_experiment(experiment_number, custom_clock_rates=custom_clock_rates, communication_probability=communication_probability)
 
 if __name__ == "__main__":
     main()
